@@ -35,7 +35,7 @@ class ProductServiceIntegrationTest {
         when(productRepository.save(any(Product.class))).thenReturn(expected);
         Product result = productService.save(input);
         assertThat(result.getId()).isEqualTo(1L);
-        assertThat(result.getName()).isEqualTo("NOMBRE INCORRECTO");
+        assertThat(result.getName()).isEqualTo("Auriculares Sony");
         verify(productRepository, times(1)).save(any(Product.class));
     }
 
